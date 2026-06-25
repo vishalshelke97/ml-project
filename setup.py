@@ -9,7 +9,7 @@ def get_requirments(file_path:str)->List[str]:
     '''
     requirments=[]
     with open(file_path)as file_obj:
-        requirments=file_obj.readline()
+        requirments=file_obj.readlines()
         requirments=[req.replace("\n","") for req in requirments]
 
         if HYPEN_E_DOT in requirments:
